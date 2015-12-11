@@ -1,43 +1,15 @@
-
-
-  <head>
+<html>
+ <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script type='text/javascript' src='jquery-1.11.3.min.js'></script>
-    <script type='text/javascript' src='flowtype.js'></script>
+    <script type='text/javascript' src='files/jquery-1.11.3.min.js'></script>
+    <script type='text/javascript' src='files/flowtype.js'></script>
+    <script type='text/javascript' src="files/surfacecurve-color.js"></script>
     <script type='text/javascript' src='script.js'></script>
   </head>
 
   <body>
-    <center><input id="text" maxlength="10"></center>
-    <br>
-    <div id="overlay" class="main-container">
-      <div class="fixer-container">
-        <div class="side">
-          <input type="range"
-                 id="liuku"
-                 value="0"
-                 min="-7"
-                 max="7"
-                 step="1">
-        </div>
-
-        <div class="side">
-          <input type="range"
-                 id="liuku2"
-                 value="127"
-                 min="2"
-                 max="255"
-                 step="1">
-       </div>
-
-       <div class="side">
-         <input type="range"
-                id="liuku"
-                value="0"
-                min="-7"
-                max="7"
-                step="1">
-      </div>
-     </div>
+    <div id="area">
+      <center><textarea type="text" id="text" maxlength="10"></textarea></center>
     </div>
   </body>
+</html>
