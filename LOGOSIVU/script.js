@@ -26,6 +26,8 @@ $(document).ready(function()
     //console.log("Y: " + mouseY);
     createGradient(mouseX, mouseY);
     interpolateKerning(mouseY);
+    changeFonts(mouseY);
+    //interpolateSize(mouseY);
   });
 
   $("#liuku").on("input",
@@ -48,7 +50,7 @@ function createGradient (mouseX, mouseY) {
   h = linearInterpolation(hp1, hp2, mouseX);
   l = linearInterpolation(100, 0, l);
   c = surfacecurve.color('hsl', [h, 100, l]);
-  console.log(l);
+  //console.log(l);
   //console.log(c.red() + ' ' + c.green() + ' ' + c.blue());
   r = c.red();
   g = c.green();
@@ -58,8 +60,36 @@ function createGradient (mouseX, mouseY) {
 }
 
 function interpolateKerning (mouseY) {
-  var kerning = linearInterpolation(0, 10, mouseY);
+  if(mouseY <= 0.66) {
+    var kerning = linearInterpolation(50, -20, mouseY);
+    console.log(kerning);
+  }
+  else {
+    var kerning = linearInterpolation(16, -43, mouseY);
+  }
   $('#text').css("letter-spacing", kerning);
+}
+
+function interpolateSize (mouseY) {
+  var size = linearInterpolation(200, 500, mouseY);
+  //var place = linearInterpolation(100, 0, mouseY);
+  $('#text').css("font-size", size);
+  //$('#text').css("line-height", place + "%");
+}
+
+function changeFonts (mouseY) {
+  if(mouseY > 0.66) {
+    $('#text').css("font-family", "Logofont_bold");
+    $('#text').css("line-height", "80%");
+  }
+  else if (mouseY > 0.33) {
+    $('#text').css("font-family", "Logofont_reg");
+    $('#text').css("line-height", "80%");
+  }
+  else {
+    $('#text').css("font-family", "Logofont_a");
+    $('#text').css("line-height", "100%");
+  }
 }
 
 function linearInterpolation (p0, p1, t) {
@@ -74,7 +104,7 @@ function checkMaxlength () {
   $("#text").each(function() {
     var width = $(window).width();
       if(width >= 1000) {
-          $(this).attr('maxlength', 7);
+          $(this).attr('maxlength', 9);
           //console.log(width)
       }
       else if(width >= 900) {
