@@ -1,3 +1,11 @@
+/*
+TODO: muista laittaa niin etta teksti ei mene ruudun yli
+niin etta tekstin koko pienenee dynaamisesti
+
+TODO: tee fontin vertical keskityksestä sivun koon mukaan muuttuva
+silleen etta se pysyy keskellä
+ */
+
 $(document).ready(function()
 {
   var mouseX;
@@ -5,6 +13,7 @@ $(document).ready(function()
   var h, s, l;
   var r, g, b;
   var c;
+  var stop = false;
 
   checkMaxlength();
 
@@ -19,27 +28,35 @@ $(document).ready(function()
     fontRatio: 2
   });
 
-  $("#area").mousemove(function(event) {
-    mouseX = event.pageX/$(window).width();
-    mouseY = event.pageY/$(window).height();
-    //console.log("X: " + mouseX);
-    //console.log("Y: " + mouseY);
-    createGradient(mouseX, mouseY);
-    interpolateKerning(mouseY);
-    changeFonts(mouseY);
-    //interpolateSize(mouseY);
-  });
+
+    $("#area").mousemove(function(event) {
+      if(!stop) {
+        mouseX = event.pageX/$(window).width();
+        mouseY = event.pageY/$(window).height();
+        //console.log("X: " + mouseX);
+        //console.log("Y: " + mouseY);
+        createGradient(mouseX, mouseY);
+        interpolateKerning(mouseY);
+        changeFonts(mouseY);
+        //interpolateSize(mouseY);
+      }
+    });
 
   $("#liuku").on("input",
   function ()
   {
     $('#text').css("letter-spacing", $(this).val() + "px");
-
   });
 
     $(window).resize(function() {
         checkMaxlength();
     });
+  $(document).keypress(function(e) {
+    if(e.keyCode === 27) {
+      stop = !stop;
+    }
+    //console.log(stop);
+  });
 });
 
 function createGradient (mouseX, mouseY) {
@@ -62,7 +79,7 @@ function createGradient (mouseX, mouseY) {
 function interpolateKerning (mouseY) {
   if(mouseY <= 0.66) {
     var kerning = linearInterpolation(50, -20, mouseY);
-    console.log(kerning);
+    //console.log(kerning);
   }
   else {
     var kerning = linearInterpolation(16, -43, mouseY);
