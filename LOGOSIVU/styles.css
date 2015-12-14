@@ -35,7 +35,7 @@ textarea:focus {
 #text {
     overflow: hidden;
     resize: none;
-    font-family: "Logofont_a";
+    font-family: "Logofont_a", Serif;
     border: 0px solid;
     margin-top: 15%;
     font-size: 220px;
