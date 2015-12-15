@@ -10,20 +10,17 @@ $(document).ready(function()
 {
   var mouseX;
   var mouseY;
-  var h, s, l;
-  var r, g, b;
-  var c;
   var stop = false;
 
   colors = [
-    [39, 37, 37],    //1
-    [51, 52, 142],   //2
+    [176, 179, 176],    //1
+    [77, 80, 158],   //2
     [140, 140, 140], //3
-    [125, 43, 139],  //4
-    [163, 36, 48],   //5
-    [107, 78, 47],   //6
-    [309, 82, 48],   //7
-    [209, 112, 156], //8
+    [136, 72, 151],  //4
+    [206, 57, 60],   //5
+    [158, 119, 57],   //6
+    [243, 98, 59],   //7
+    [213, 110, 166], //8
     [255, 242, 45],  //9
     [51, 164, 87]    //10
   ];
@@ -47,9 +44,7 @@ $(document).ready(function()
         mouseY = event.pageY/$(window).height();
         //console.log("X: " + mouseX);
         //console.log("Y: " + mouseY);
-        //createGradient(mouseX, mouseY);
-        //createRgbGradient(mouseX, 39, 51, 37, 52, 39, 142);
-        multiRgbGradient(mouseX);
+        positionColors(mouseX, mouseY);
         interpolateKerning(mouseY);
         changeFonts(mouseY);
         //interpolateSize(mouseY);
@@ -75,7 +70,6 @@ $(document).ready(function()
   });
 });
 
-
 function createGradient (mouseX, mouseY) {
   l = (mouseX + mouseY) * 0.5;
   var hp0 = 360;
@@ -90,15 +84,53 @@ function createGradient (mouseX, mouseY) {
   g = c.green();
   b = c.blue();
   //console.log(r + " " + g + " " + b);
-  $('#text').css("color", "rgb(" + r + "," + g + "," + b + ")");
+  $('#text').css("color", "rgb(" + r * mouseY + ","
+      + g * mouseY + "," + b * mouseY + ")");
 }
 
+function positionColors (mouseX, mouseY) {
+  if(mouseX > 0.875) {
+    changeTextColor(colors[9][0], colors[9][1], colors[9][2], mouseY)
+  }
+  else if(mouseX > 0.750) {
+    changeTextColor(colors[8][0], colors[8][1], colors[8][2], mouseY)
+  }
+  else if(mouseX > 0.625) {
+    changeTextColor(colors[7][0], colors[7][1], colors[7][2], mouseY)
+  }
+  else if(mouseX > 0.500) {
+    changeTextColor(colors[6][0], colors[6][1], colors[6][2], mouseY)
+  }
+  else if(mouseX > 0.375) {
+    changeTextColor(colors[5][0], colors[5][1], colors[5][2], mouseY)
+  }
+  else if(mouseX > 0.250) {
+    changeTextColor(colors[4][0], colors[4][1], colors[4][2], mouseY)
+  }
+  else if(mouseX > 0.125) {
+    changeTextColor(colors[1][0], colors[1][1], colors[1][2], mouseY)
+  }
+  else if(mouseX < 0.125) {
+    changeTextColor(colors[0][0], colors[0][1], colors[0][2], mouseY)
+  }
+
+}
+
+function changeTextColor(r, g, b, mouseY) {
+  var c = surfacecurve.color('rgb(' + r + "," + g + "," + b + ")");
+  r = c.red();
+  g = c.green();
+  b = c.blue();
+  mouseY = exponentialInterpolation(1, 0, mouseY);
+  //console.log(Math.floor((g * mouseY)));
+  $('#text').css("color", "rgb(" + Math.floor(r * mouseY)
+      + "," + Math.floor(g * mouseY) + "," + Math.floor(b * mouseY) + ")");
+}
 
 function multiRgbGradient (mouseX) {
 
   if(mouseX > 0.9) {
     var nMouse = (mouseX - 0.9) / (1 - 0.9);
-    console.log(nMouse);
     createRgbGradient(nMouse,
         colors[8][0], colors[8][1], colors[8][2],
         colors[9][0], colors[9][1], colors[9][2]);
@@ -174,11 +206,11 @@ function createRgbGradient (mouse, r1, g1, b1, r2, g2, b2) {
 
 function interpolateKerning (mouseY) {
   if(mouseY <= 0.66) {
-    var kerning = linearInterpolation(50, -20, mouseY);
+    var kerning = linearInterpolation(50, 0, mouseY);
     //console.log(kerning);
   }
   else {
-    var kerning = linearInterpolation(16, -43, mouseY);
+    var kerning = linearInterpolation(16, 0, mouseY);
   }
   $('#text').css("letter-spacing", kerning);
 }
@@ -193,7 +225,7 @@ function interpolateSize (mouseY) {
 function changeFonts (mouseY) {
   if(mouseY > 0.66) {
     $('#text').css("font-family", "Logofont_bold");
-    $('#text').css("line-height", "80%");
+    $('#text').css("line-height", "130%");
   }
   else if (mouseY > 0.33) {
     $('#text').css("font-family", "Logofont_reg");
@@ -201,12 +233,16 @@ function changeFonts (mouseY) {
   }
   else {
     $('#text').css("font-family", "Logofont_a");
-    $('#text').css("line-height", "100%");
+    $('#text').css("line-height", "130%");
   }
 }
 
 function linearInterpolation (p0, p1, t) {
   return p0 + (t * (p1 - p0));
+}
+
+function exponentialInterpolation(p0, p1, t) {
+  return (p0*2) + (t * ((p1*2) - (p0*2)));
 }
 
 function quadraticInterpolation (p0, p1, p2, t) {
