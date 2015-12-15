@@ -152,13 +152,24 @@ function exponentialInterpolation(p0, p1, t) {
 function checkMaxlength () {
   $("#text").each(function() {
     var width = $(window).width();
-      if(width >= 1000) {
-          $(this).attr('maxlength', 9);
-          //console.log(width)
-      }
-      else if(width >= 900) {
+
+    if(width >= 1600) {
+      $(this).attr('maxlength', 9);
+    }
+    else if(width >= 1400) {
+      $(this).attr('maxlength', 8);
+    }
+    else if(width >= 1200) {
+      $(this).attr('maxlength', 7);
+    }
+    else if(width >= 1000) {
+      $(this).attr('maxlength', 6);
+    }
+    else if(width >= 900) {
       $(this).attr('maxlength', 5);
-      //console.log(width)
+    }
+    else {
+      $(this).attr('maxlength', 4);
     }
   });
 };
