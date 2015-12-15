@@ -149,10 +149,6 @@ function exponentialInterpolation(p0, p1, t) {
   return (p0*2) + (t * ((p1*2) - (p0*2)));
 }
 
-function quadraticInterpolation (p0, p1, p2, t) {
-  return ((1-t)*((1-t*(p0) + t*p1)) + (t*((1-t)*p1 + (t*p2))));
-}
-
 function checkMaxlength () {
   $("#text").each(function() {
     var width = $(window).width();
