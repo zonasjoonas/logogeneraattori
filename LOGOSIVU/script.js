@@ -1,6 +1,10 @@
 $(document).ready(function()
 {
   $('#picarea').hide();
+  for(var i = 1; i <= 8; i++) {
+    $('#t'+i).hide();
+  }
+
   var mouseX;
   var mouseY;
   var stop = false;
@@ -20,6 +24,20 @@ $(document).ready(function()
   ];
 
   checkMaxlength();
+
+  $(".color1").mouseover(function() {
+    $(this).css("height", "190px");
+    //$(".color1").css("height", "200px");
+    $(this).css("z-index", "1000");
+    var idNum = $(this).attr('id');
+    $('#t'+idNum).show();
+  });
+
+  $(".color1").mouseleave(function() {
+    $(this).css("height", "3.5%");
+    var idNum = $(this).attr('id');
+    $('#t'+idNum).hide();
+  });
 
   $("body").flowtype({
     minumum: 200,
@@ -107,7 +125,7 @@ function changeTextColor(r, g, b, mouseY) {
   b = c.blue();
   mouseY = exponentialInterpolation(1, 0, mouseY);
   //console.log(Math.floor((g * mouseY)));
-  $('#text').css("color", "rgb(" + Math.floor(r * mouseY)
+  $('#text').css("text-shadow", "0 0 0 rgb(" + Math.floor(r * mouseY)
       + "," + Math.floor(g * mouseY) + "," + Math.floor(b * mouseY) + ")");
 }
 

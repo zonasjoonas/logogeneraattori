@@ -35,7 +35,7 @@ textarea:focus {
     background: linear-gradient(0deg, black, white);
     width: 15px;
     height: 100%;
-    margin-left: 0%;
+    margin-left: -1%;
 }
 
 #picarea {
@@ -51,7 +51,7 @@ textarea:focus {
 
 .color1 {
     position: fixed;
-    width: 13.2%;
+    width: 12.5%;
     height: 3.5%;
     top: 0;
 }
@@ -59,7 +59,7 @@ textarea:focus {
 .textLegend {
     color: rgb(0,0,0);
     font-family: "Logofont_a";
-    font-size: 100px;
+    font-size: 75px;
     position: absolute;
     right: 35px;
 }
@@ -68,6 +68,16 @@ textarea:focus {
     float: left;
     position: relative;
     left: -50%;
+}
+
+.inside {
+    height: 100%;
+    font-family: "Courier New", sans-serif;
+    font-size: 14px;
+    padding-top: 25%;
+    padding-left: 5%;
+    line-height: 180%;
+    color: white;
 }
 
 #text {
@@ -83,8 +93,10 @@ textarea:focus {
     font-size: 250px;
     letter-spacing: 0px;
     text-align: center;
-    height: 375px;
+    height: 325px;
     width: 100%;
     line-height: 130%;
-    color: rgb(0, 0, 0);
+    text-shadow: 0 0 0  rgb(0,0,0);
+    color: rgba(0, 0, 0, 0);
+
 }
