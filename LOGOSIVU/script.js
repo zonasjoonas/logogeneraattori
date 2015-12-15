@@ -1,16 +1,10 @@
-/*
-TODO: muista laittaa niin etta teksti ei mene ruudun yli
-niin etta tekstin koko pienenee dynaamisesti
-
-TODO: tee fontin vertical keskityksestä sivun koon mukaan muuttuva
-silleen etta se pysyy keskellä
- */
-
 $(document).ready(function()
 {
+  $('#picarea').hide();
   var mouseX;
   var mouseY;
   var stop = false;
+  var showPics = false;
 
   colors = [
     [176, 179, 176],    //1
@@ -65,28 +59,18 @@ $(document).ready(function()
   $(document).keypress(function(e) {
     if(e.keyCode === 27) {
       stop = !stop;
+      showPics = !showPics;
+      if(!showPics) {
+        $('#picarea').hide();
+      }
+      else {
+        $('#picarea').show();
+      }
+
     }
     //console.log(stop);
   });
 });
-
-function createGradient (mouseX, mouseY) {
-  l = (mouseX + mouseY) * 0.5;
-  var hp0 = 360;
-  var hp1 = 235;
-  var hp2 = 56;
-  h = linearInterpolation(hp1, hp2, mouseX);
-  l = linearInterpolation(100, 0, l);
-  c = surfacecurve.color('hsl', [h, 100, l]);
-  //console.log(l);
-  //console.log(c.red() + ' ' + c.green() + ' ' + c.blue());
-  r = c.red();
-  g = c.green();
-  b = c.blue();
-  //console.log(r + " " + g + " " + b);
-  $('#text').css("color", "rgb(" + r * mouseY + ","
-      + g * mouseY + "," + b * mouseY + ")");
-}
 
 function positionColors (mouseX, mouseY) {
   if(mouseX > 0.875) {
@@ -125,83 +109,6 @@ function changeTextColor(r, g, b, mouseY) {
   //console.log(Math.floor((g * mouseY)));
   $('#text').css("color", "rgb(" + Math.floor(r * mouseY)
       + "," + Math.floor(g * mouseY) + "," + Math.floor(b * mouseY) + ")");
-}
-
-function multiRgbGradient (mouseX) {
-
-  if(mouseX > 0.9) {
-    var nMouse = (mouseX - 0.9) / (1 - 0.9);
-    createRgbGradient(nMouse,
-        colors[8][0], colors[8][1], colors[8][2],
-        colors[9][0], colors[9][1], colors[9][2]);
-  }
-  else if (mouseX > 0.8) {
-    var nMouse = (mouseX - 0.8) / (0.9 - 0.8);
-    createRgbGradient(nMouse,
-        colors[7][0], colors[7][1], colors[7][2],
-        colors[8][0], colors[8][1], colors[8][2]);
-  }
-  else if (mouseX > 0.7) {
-    var nMouse = (mouseX - 0.7) / (0.8 - 0.7);
-    createRgbGradient(nMouse,
-        colors[6][0], colors[6][1], colors[6][2],
-        colors[7][0], colors[7][1], colors[7][2]);
-  }
-  else if (mouseX > 0.6) {
-    var nMouse = (mouseX - 0.6) / (0.7 - 0.6);
-    createRgbGradient(nMouse,
-        colors[5][0], colors[5][1], colors[5][2],
-        colors[6][0], colors[6][1], colors[6][2]);
-  }
-  else if (mouseX > 0.5) {
-    var nMouse = (mouseX - 0.5) / (0.6 - 0.5);
-    createRgbGradient(nMouse,
-        colors[4][0], colors[4][1], colors[4][2],
-        colors[5][0], colors[5][1], colors[5][2]);
-  }
-  else if (mouseX > 0.4) {
-    var nMouse = (mouseX - 0.4) / (0.5 - 0.4);
-    createRgbGradient(nMouse,
-        colors[3][0], colors[3][1], colors[3][2],
-        colors[4][0], colors[4][1], colors[4][2]);
-  }
-  else if (mouseX > 0.3) {
-    var nMouse = (mouseX - 0.3) / (0.4 - 0.3);
-    createRgbGradient(nMouse,
-        colors[2][0], colors[2][1], colors[2][2],
-        colors[3][0], colors[3][1], colors[3][2]);
-  }
-  else if (mouseX > 0.2) {
-    var nMouse = (mouseX - 0.2) / (0.3 - 0.2);
-    createRgbGradient(nMouse,
-        colors[1][0], colors[1][1], colors[1][2],
-        colors[2][0], colors[2][1], colors[2][2]);
-  }
-  else if (mouseX > 0.1) {
-    var nMouse = (mouseX - 0.1) / (0.2 - 0.1);
-    createRgbGradient(nMouse,
-        colors[0][0], colors[0][1], colors[0][2],
-        colors[1][0], colors[1][1], colors[1][2]);
-  }
-  else {
-    var nMouse = mouseX / 0.1;
-    //laita RGB ylos suoraan
-    createRgbGradient(nMouse,
-        255, 255, 255,
-        colors[0][0], colors[0][1], colors[0][2]);
-  }
-}
-
-function createRgbGradient (mouse, r1, g1, b1, r2, g2, b2) {
-  r = linearInterpolation(r1, r2, mouse);
-  g = linearInterpolation(g1, g2, mouse);
-  b = linearInterpolation(b1, b2, mouse);
-  c = surfacecurve.color('rgb(' + r + "," + g + "," + b + ")");
-  r = c.red();
-  g = c.green();
-  b = c.blue();
-  //console.log(r, g, b);
-  $('#text').css("color", "rgb(" + r + "," + g + "," + b + ")");
 }
 
 function interpolateKerning (mouseY) {

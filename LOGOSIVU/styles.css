@@ -1,6 +1,7 @@
 @font-face {font-family: Logofont_a; src: url("files/1.ttf")}
 @font-face {font-family: Logofont_reg; src: url("files/2.ttf")}
 @font-face {font-family: Logofont_bold; src: url("files/33.ttf")}
+@font-face {font-family: modernpics; src: url("files/4.ttf")}
 
 body {
     overflow: hidden;
@@ -29,15 +30,37 @@ textarea:focus {
     left: 50%;
 }
 
+.greyGradient {
+    background: linear-gradient(0deg, black, white);
+    width: 15px;
+    height: 100%;
+    margin-left: 0%;
+}
+
+#picarea {
+    width: 100%;
+}
+
+.test {
+    position: fixed;
+    font-family: "modernpics";
+    font-size: 150px;
+    left: 47%;
+}
+
 .color1 {
     position: fixed;
-    border: dotted;
-    border-color: rgb(200, 200, 200);
-    border-width: 0.08em;
-    background-color: rgba(0, 0, 0, 0);
-    width: 12.33%;
-    height: 120%;
+    width: 12.5%;
+    height: 3.5%;
     top: 0;
+}
+
+.textLegend {
+    color: rgb(0,0,0);
+    font-family: "Logofont_a";
+    font-size: 100px;
+    position: absolute;
+    right: 35px;
 }
 
 .fixer-container {
