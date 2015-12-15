@@ -112,21 +112,18 @@ function changeTextColor(r, g, b, mouseY) {
 }
 
 function interpolateKerning (mouseY) {
-  if(mouseY <= 0.66) {
-    var kerning = linearInterpolation(50, 0, mouseY);
+  if(mouseY <= 0.33) {
+    var kerning = linearInterpolation(50, -30, mouseY);
+    //console.log(kerning);
+  }
+  else if(mouseY <= 0.66) {
+    var kerning = linearInterpolation(50, 10, mouseY);
     //console.log(kerning);
   }
   else {
     var kerning = linearInterpolation(16, 0, mouseY);
   }
   $('#text').css("letter-spacing", kerning);
-}
-
-function interpolateSize (mouseY) {
-  var size = linearInterpolation(200, 500, mouseY);
-  //var place = linearInterpolation(100, 0, mouseY);
-  $('#text').css("font-size", size);
-  //$('#text').css("line-height", place + "%");
 }
 
 function changeFonts (mouseY) {
