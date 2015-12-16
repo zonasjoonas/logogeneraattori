@@ -102,3 +102,11 @@ textarea:focus {
     color: rgba(0, 0, 0, 0);
 
 }
+
+::selection {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-moz-selection {
+    background: rgba(0, 0, 0, 0);
+}
