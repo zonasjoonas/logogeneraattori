@@ -24,8 +24,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LOGOSIVU/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.518518">
-              <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+            <state vertical-scroll-proportion="-6.5185184">
+              <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -34,19 +34,27 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9">
-              <caret line="46" column="112" selection-start-line="46" selection-start-column="112" selection-end-line="46" selection-end-column="112" />
+            <state vertical-scroll-proportion="0.5232558">
+              <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#6;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#8;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#div#8;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h1#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
@@ -58,8 +66,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LOGOSIVU/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.333333">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state vertical-scroll-proportion="-12.666667">
+              <caret line="163" column="45" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -75,8 +83,8 @@
       <list>
         <option value="$PROJECT_DIR$/LOGOSIVU/main.html" />
         <option value="$PROJECT_DIR$/main.html" />
-        <option value="$PROJECT_DIR$/LOGOSIVU/styles.css" />
         <option value="$PROJECT_DIR$/LOGOSIVU/script.js" />
+        <option value="$PROJECT_DIR$/LOGOSIVU/styles.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -87,8 +95,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1062" />
-    <option name="width" value="858" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -237,10 +245,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1062" y="0" width="858" height="1040" extended-state="0" />
-    <editor active="false" />
+    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2741546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24408603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -308,15 +316,23 @@
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#6;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#8;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
@@ -403,35 +419,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LOGOSIVU/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.333333">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state vertical-scroll-proportion="-12.666667">
+          <caret line="163" column="45" selection-start-line="163" selection-start-column="45" selection-end-line="163" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LOGOSIVU/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.518518">
-          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+        <state vertical-scroll-proportion="-6.5185184">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9">
-          <caret line="46" column="112" selection-start-line="46" selection-start-column="112" selection-end-line="46" selection-end-column="112" />
+        <state vertical-scroll-proportion="0.5232558">
+          <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#6;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#8;n#div#0;n#div#1;n#body#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#1;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#2;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#3;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h1#4;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />

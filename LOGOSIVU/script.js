@@ -1,3 +1,21 @@
+var mouseX;
+var mouseY;
+var stop = false;
+var showPics = false;
+
+var colors = [
+  [176, 179, 176],    //1
+  [77, 80, 158],   //2
+  [140, 140, 140], //3
+  [136, 72, 151],  //4
+  [206, 57, 60],   //5
+  [158, 119, 57],   //6
+  [243, 98, 59],   //7
+  [213, 110, 166], //8
+  [255, 242, 45],  //9
+  [51, 164, 87]    //10
+];
+
 $(document).ready(function()
 {
   $('textarea').each(function(){$(this).attr('rows', 1);});
@@ -7,25 +25,11 @@ $(document).ready(function()
     $('#t'+i).hide();
   }
 
-  var mouseX;
-  var mouseY;
-  var stop = false;
-  var showPics = false;
-
-  colors = [
-    [176, 179, 176],    //1
-    [77, 80, 158],   //2
-    [140, 140, 140], //3
-    [136, 72, 151],  //4
-    [206, 57, 60],   //5
-    [158, 119, 57],   //6
-    [243, 98, 59],   //7
-    [213, 110, 166], //8
-    [255, 242, 45],  //9
-    [51, 164, 87]    //10
-  ];
-
   checkMaxlength();
+
+  $("#info").click(function () {
+    picShower();
+  });
 
   $("#text").click(function() {
 
@@ -99,18 +103,22 @@ $(document).ready(function()
   $(document).keypress(function(e) {
     if(e.keyCode === 27) {
       stop = !stop;
-      showPics = !showPics;
-      if(!showPics) {
-        $('#picarea').hide();
-      }
-      else {
-        $('#picarea').show();
-      }
-
+      picShower();
     }
     //console.log(stop);
   });
 });
+
+function picShower () {
+  showPics = !showPics;
+  if(!showPics) {
+    $('#picarea').hide();
+  }
+  else {
+    $('#picarea').show();
+  }
+
+}
 
 function positionColors (mouseX, mouseY) {
   if(mouseX > 0.875) {
@@ -153,7 +161,7 @@ function changeTextColor(r, g, b, mouseY) {
 
 function interpolateKerning (mouseY) {
   if(mouseY <= 0.33) {
-    var kerning = linearInterpolation(50, -20, mouseY);
+    var kerning = linearInterpolation(50, -15, mouseY);
     //console.log(kerning);
   }
   else if(mouseY <= 0.66) {
