@@ -25,6 +25,26 @@ $(document).ready(function()
 
   checkMaxlength();
 
+  $("#text").click(function() {
+
+    // cache textarea as we need it more than once
+    var textarea = $("textarea"),
+
+    // save old value as we need to clear it
+        val = textarea.val();
+
+    // if the value doesn't end in a space, add one
+    if (val.charAt(val.length-1) != " ") {
+      val += "";
+    }
+
+    // focus textarea, clear value, re-apply
+    textarea
+        .focus()
+        .val("")
+        .val(val);
+  });
+
   $(".color1").mouseover(function() {
     $(this).css("height", "5.25cm");
     //$(".color1").css("height", "200px");
@@ -131,7 +151,7 @@ function changeTextColor(r, g, b, mouseY) {
 
 function interpolateKerning (mouseY) {
   if(mouseY <= 0.33) {
-    var kerning = linearInterpolation(50, -30, mouseY);
+    var kerning = linearInterpolation(50, -20, mouseY);
     //console.log(kerning);
   }
   else if(mouseY <= 0.66) {

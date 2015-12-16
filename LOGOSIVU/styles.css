@@ -32,10 +32,11 @@ textarea:focus {
 }
 
 .greyGradient {
+    positin: fixed;
     background: linear-gradient(0deg, black, white);
     width: 15px;
+    margin-left: -0.2cm;
     height: 100%;
-    margin-left: -1%;
 }
 
 #picarea {
