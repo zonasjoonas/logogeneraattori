@@ -45,7 +45,7 @@ textarea:focus {
 .pictogram {
     position: fixed;
     font-family: "modernpics";
-    font-size: 150px;
+    font-size: 100px;
     left: 47%;
 }
 
@@ -74,7 +74,7 @@ textarea:focus {
     height: 100%;
     font-family: "Courier New", sans-serif;
     font-size: 14px;
-    padding-top: 25%;
+    padding-top: 1cm;
     padding-left: 5%;
     line-height: 180%;
     color: white;

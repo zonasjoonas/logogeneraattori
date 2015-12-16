@@ -26,7 +26,7 @@ $(document).ready(function()
   checkMaxlength();
 
   $(".color1").mouseover(function() {
-    $(this).css("height", "190px");
+    $(this).css("height", "5.25cm");
     //$(".color1").css("height", "200px");
     $(this).css("z-index", "1000");
     var idNum = $(this).attr('id');
@@ -170,7 +170,6 @@ function exponentialInterpolation(p0, p1, t) {
 function checkMaxlength () {
   $("#text").each(function() {
     var width = $(window).width();
-
     if(width >= 1600) {
       $(this).attr('maxlength', 9);
     }
