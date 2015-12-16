@@ -102,7 +102,12 @@ $(document).ready(function()
 
   $(document).keypress(function(e) {
     if(e.keyCode === 27) {
-      stop = !stop;
+      if(!showPics) {
+        stop = true;
+      }
+      else {
+        stop = false;
+      }
       picShower();
     }
     //console.log(stop);
