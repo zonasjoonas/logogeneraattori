@@ -1,5 +1,7 @@
 $(document).ready(function()
 {
+  $('textarea').each(function(){$(this).attr('rows', 1);});
+  
   $('#picarea').hide();
   for(var i = 1; i <= 8; i++) {
     $('#t'+i).hide();
